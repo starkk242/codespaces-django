@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import JsonResponse
+
 
 def index(request):
     return render(
@@ -8,3 +10,7 @@ def index(request):
             "title": "Django example",
         },
     )
+
+
+def new(request):
+    return JsonResponse({"just": True})
